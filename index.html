@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070708">
+  <meta name="description" content="A little universe made for you.">
+  <title>All the Tomorrows</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="hud" aria-label="Experience controls">
+    <div class="chapter" id="chapterLabel">01 · BEFORE YOU</div>
+    <button class="music-control" id="musicButton" type="button" aria-label="Play music">
+      <span class="music-icon">♪</span><span id="musicText">Music</span>
+    </button>
+  </header>
+
+  <main id="experience">
+    <!-- =========================
+         SCENE 1 — BEFORE YOU
+         ========================= -->
+    <section class="scene scene-intro" data-chapter="01 · BEFORE YOU">
+      <div class="intro-copy cinematic-copy">
+        <p class="eyebrow reveal-line">A little universe, just for you.</p>
+        <div class="intro-line" id="introLine" aria-live="polite"></div>
+        <div class="continue-cue" id="continueCue">
+          <span>continue</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 2 — FIRST MEMORY
+         ========================= -->
+    <section class="scene scene-memory memory-one" data-chapter="02 · FIRST MEMORY">
+      <div class="memory-stage">
+        <div class="memory-image-wrap" data-depth="0.16">
+          <div class="memory-light"></div>
+          <img class="memory-image" src="photo1.jpg" alt="A memory of our hands together" loading="eager">
+        </div>
+        <div class="memory-shadow"></div>
+      </div>
+      <div class="memory-copy">
+        <p class="scene-kicker">somewhere along the way</p>
+        <h2>you became<br><em>my person.</em></h2>
+        <p class="body-copy">And I don't think I ever properly told you how much that means to me.</p>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 3 — SECOND MEMORY
+         ========================= -->
+    <section class="scene scene-memory memory-two" data-chapter="03 · LITTLE MEMORIES">
+      <div class="memory-stage">
+        <div class="memory-image-wrap" data-depth="0.22">
+          <div class="warm-bloom"></div>
+          <img class="memory-image" src="photo2.jpg" alt="A memory of us together" loading="lazy">
+        </div>
+      </div>
+      <div class="memory-copy">
+        <p class="scene-kicker">and then there were all these little moments</p>
+        <h2>We've already made<br><em>so many little memories.</em></h2>
+        <div class="memory-list">
+          <span>Some planned.</span>
+          <span>Some completely random.</span>
+          <span>And some that I wish I could replay forever.</span>
+        </div>
+        <p class="body-copy delayed-thought">But when I look at us...</p>
+        <p class="body-copy delayed-thought">I don't just think about what we've already lived.</p>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 4 — THE FUTURE
+         ========================= -->
+    <section class="scene scene-future" data-chapter="04 · THE FUTURE">
+      <div class="road-world" aria-hidden="true">
+        <div class="road-glow"></div>
+        <svg class="life-road" viewBox="0 0 1000 650" preserveAspectRatio="none">
+          <path class="road-path road-shadow"
+                d="M -40 560 C 190 535, 180 350, 390 390 S 585 520, 700 320 S 850 100, 1040 80"></path>
+          <path class="road-path road-line"
+                d="M -40 560 C 190 535, 180 350, 390 390 S 585 520, 700 320 S 850 100, 1040 80"></path>
+        </svg>
+        <div class="road-marker marker-1">MORE<br><strong>MORNINGS</strong></div>
+        <div class="road-marker marker-2">MORE<br><strong>ADVENTURES</strong></div>
+        <div class="road-marker marker-3">MORE<br><strong>VICTORIES</strong></div>
+        <div class="road-marker marker-4">MORE<br><strong>ORDINARY DAYS</strong></div>
+      </div>
+
+      <div class="future-copy">
+        <p class="scene-kicker">past the edge of what we know</p>
+        <h2>I think about everything<br>we haven't lived <em>yet.</em></h2>
+        <div class="future-words" aria-label="The future">
+          <span>More mornings.</span>
+          <span>More late-night conversations.</span>
+          <span>More stupid jokes.</span>
+          <span>More adventures.</span>
+          <span>More difficult days.</span>
+          <span>More victories.</span>
+          <span>More ordinary days that somehow become special.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 5 — THIRD PHOTO / CENTERPIECE
+         ========================= -->
+    <section class="scene scene-centerpiece" data-chapter="05 · WHO I WANT BESIDE ME">
+      <div class="center-image-stage">
+        <div class="center-haze"></div>
+        <div class="center-image-wrap">
+          <img class="center-image" src="photo3.jpg" alt="A favorite memory" loading="lazy">
+        </div>
+      </div>
+      <div class="center-copy">
+        <p class="center-line">I don't know what life has planned for us.</p>
+        <p class="center-line">I don't know where we'll be.</p>
+        <p class="center-line">I don't know what we'll become.</p>
+        <div class="center-pause"></div>
+        <p class="center-line">But I know who I want beside me.</p>
+        <div class="you-word">You<span>.</span></div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 6 — THE PROMISE
+         ========================= -->
+    <section class="scene scene-promise" data-chapter="06 · THE PROMISE">
+      <div class="promise-orb" aria-hidden="true"></div>
+      <div class="promise-copy">
+        <p>I can't promise that every day will be perfect.</p>
+        <p>I can't promise that we'll never fight.</p>
+        <p>I can't promise that life will always be easy.</p>
+        <div class="promise-pause"></div>
+        <p>But I can promise this...</p>
+        <h2>I'll keep choosing you.</h2>
+        <p>Through every version of us.</p>
+        <p>Through every stage of life.</p>
+      </div>
+    </section>
+
+    <!-- =========================
+         SCENE 7 — THE QUESTION
+         ========================= -->
+    <section class="scene scene-question" data-chapter="07 · ONE QUESTION">
+      <div class="sky-memories" aria-hidden="true">
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+        <img src="photo3.jpg" alt="">
+      </div>
+      <div class="stars" aria-hidden="true"></div>
+      <div class="question-copy">
+        <p class="question-small">So...</p>
+        <p class="question-small">I have one question.</p>
+        <h2>Will you walk through life<br>with me?</h2>
+        <div class="little-chapters">
+          <span>Not just for the big moments.</span>
+          <span>For the little ones too.</span>
+          <span>For every chapter.</span>
+          <span>For all the chapters we haven't written yet.</span>
+        </div>
+        <p class="final-question">Will you be there for the lifetime of little moments with me?</p>
+        <button class="yes-button" id="yesButton" type="button">
+          <span>YES. ALWAYS.</span><b>♥</b>
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================
+         FINALE
+         ========================= -->
+    <section class="scene scene-finale" id="finale" data-chapter="∞ · TOGETHER">
+      <div class="celebration-glow" aria-hidden="true"></div>
+      <div class="finale-copy">
+        <p class="finale-kicker">then let's keep going</p>
+        <h2>Then let's make the rest<br>of our story <em>beautiful.</em></h2>
+        <p class="finale-sub">Chapter after chapter.<br>Day after day.<br><strong>Together. ♥</strong></p>
+        <button class="secret-trigger" id="secretTrigger" type="button">one more thing...</button>
+        <div class="secret-message" id="secretMessage" aria-hidden="true">
+          If I had to choose again,<br><em>I'd still choose you.</em>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="loveMusic" preload="none" src="love.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
